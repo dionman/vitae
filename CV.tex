@@ -1,7 +1,6 @@
 \documentclass[12pt]{resume}
 \usepackage{hyperref}
 \usepackage[T1]{fontenc}
-
 \hypersetup{
     colorlinks=false,
     pdfborder={0 0 0},
@@ -9,7 +8,6 @@
 \renewcommand{\categoryfont}{\sc}
 \usepackage[margin=0.15in]{geometry}
 \renewcommand{\labelitemi}{$\bullet$}
-
 \newcommand{\cvreference}[7]{%
     \textbf{#1}\newline% Name
     \ifthenelse{\equal{#2}{}}{}{\addresssymbol~#2\newline}%
@@ -18,7 +16,7 @@
     \ifthenelse{\equal{#5}{}}{}{#5\newline}%
     \ifthenelse{\equal{#6}{}}{}{\emailsymbol~\texttt{#6}\newline}%
     \ifthenelse{\equal{#7}{}}{}{\phonesymbol~#7}}
-    
+
 \setlength{\oddsidemargin}{0.8in}
 \setlength{\marginparwidth}{1.5in}
 
@@ -29,11 +27,8 @@
  \addtolength{\textwidth}{-2\oddsidemargin}
  \addtolength{\textwidth}{\marginparwidth}
  \addtolength{\textwidth}{\marginparsep}
-%
-%
 \setlength{\topmargin}{-1.4in}
-%
-%
+
 \renewcommand{\labelcitem}{$$}
 \newcommand{\first}{$1^{\mbox{\scriptsize st}}$\ }
 \newcommand{\second}{$2^{\mbox{\scriptsize nd}}$\ }
@@ -43,8 +38,6 @@
 
 
 % ------ Address --------------------------------------------------------
-
-
 \address{
 	\begin{tabbing}
 	\textbf{Home} Darwin College, University of Cambridge,\\
@@ -58,8 +51,8 @@
 	\mbox{  \\ \tt
 	%\href{mailto:d.manousakas@gmail.com}{d.manousakas@gmail.com}}\\
 	\href{mailto:dm754@cl.cam.ac.uk}{dm754@cam.ac.uk}}\\
-  	\mbox{\small\tt \url{https://www.cl.cam.ac.uk/~dm754}} \\
-	\mbox{\small\tt \url{https://uk.linkedin.com/in/dionmanousakas}} \\
+  	\mbox{\small\tt \href{https://www.cl.cam.ac.uk/~dm754}{\url{https://www.cl.cam.ac.uk/~dm754}}} \\
+	\mbox{\small\tt \href{https://uk.linkedin.com/in/dionmanousakas}{https://uk.linkedin.com/in/dionmanousakas}} \\
 	\textbf{Phone}:  +44 (0)7587 753767 \\
 	Citizenship: Greek
 	}
@@ -67,17 +60,7 @@
 
 \begin{document}
 \maketitle
-
-%%--------Personal Information
-%\begin{category}{Personal Information}
-%\citem{Birthdate}: 08/09/1989
-%\citem{Nationality}: Greek
-%\citem{Military Service}: Fulfilled
-%\end{category}
-
-
 % ------- Education ---------------------------------------------------
-
 \begin{category}{Education}
 
 \citemnobullet{} 
@@ -92,7 +75,7 @@
  
 \newline
 \textsc{University College London}\\
-\textbf{Master of Science~(MSc) in Machine Learning}}, \emph{Nov. 2015}  (Distinction).  \\
+\textbf{Master of Science~(M.Sc.) in Machine Learning}}, \emph{Nov. 2015}  (Distinction).  \\
 %Modules: Programming \& Mathematical Methods for Machine Learning, Supervised Learning, Probabilistic \& Unsupervised Learning (Gatsby Unit), Applied Machine Learning, Bioinformatics, Advanced Topics in Machine Learning (Reinforcement Learning and Kernel Methods), Information Retrieval and Data Mining,  Affective Computing and Human-Robot Interaction \\ 
 Thesis title: \emph{Longitudinal Analysis of International Trade Data based on Network Theory and Machine Learning}\\
 Supervisor: Dr Michael T. Schaub (Imperial College London) \\
@@ -144,7 +127,7 @@ fraud detection.
 % --------- Research ----------------------------------------------------
 
 \begin{category}{Research interests}
-\citemnobullet Machine Learning; Scalable and Automated Bayesian inference; Variational methods; High-dimensional statistics; Differential privacy; Information geometry; Robust inference; Point Processes; Large-scale data summarization and valuation
+\citemnobullet Machine Learning; Scalable and Automated Bayesian inference; Variational methods; High-dimensional statistics; Differential privacy; Information geometry; Robust inference; Point Processes; Uncertainty; Data valuation
 
 \noindent\rule{\textwidth}{0.2pt}
 \end{category}
@@ -165,7 +148,6 @@ fraud detection.
 
 \noindent\rule{\textwidth}{0.2pt}
 \end{category}
-
 
 
 %--------Conferences attended-------
@@ -210,7 +192,6 @@ $\bullet$  Royal Society Open Science
 
 
 
-
 %------Honors----------------
 \begin{category}{Honors \& Awards}
 
@@ -221,10 +202,9 @@ $\bullet$ 2018 \citem{ Ford Foundation Travel Stipend}, 18\ts{th} Symposium on P
 $\bullet$ 2016 \citem{Dean's List for Outstanding Academic Performance 2014/15}, Faculty of Engineering, University College London \\
 
 $\bullet$ 2007 \citem{EFG-Eurobank Honorary Plaque 'The Great Moment for Education'} awarded by the President of Democracy for achieving the highest score in Greece's National
-Higher Education Entrance Examination amongst examinees in Attica (19,809/20,000).
-\\ Ranked \textbf{2nd} nationwide \textbf{over 33,174} candidates majoring in \textbf{Technology}.
-
- \\ Ranked in \textbf{top-5} highest scores nationwide \textbf{among $\approx$ 93,000} candidates over \textbf{all specializations}.\\
+Higher Education Entrance Examination amongst examinees in Attica (19,809/20,000).\\ 
+Ranked \textbf{2nd} nationwide \textbf{over 33,174} candidates majoring in \textbf{Technology}.\\ 
+Ranked in \textbf{top-5} highest scores nationwide \textbf{among $\approx$ 93,000} candidates over \textbf{all specializations}.\\
 
 $\bullet$ 2007 \citem{Georgios K. Kontaxis Award} for ranking 4th in Qualifying Examination
 for the School of Electrical \& Computer Engineering, National Technical University of Athens \\
@@ -262,8 +242,6 @@ used for Chronic Low Back Pain Rehabilitation, Prediction of Subcellular Locatio
 \fi
 
 
-
-
 %------Linguistic----------------
 \begin{category}{Linguistic Skills}
 \citemnobullet Greek (native),
@@ -276,46 +254,12 @@ used for Chronic Low Back Pain Rehabilitation, Prediction of Subcellular Locatio
 
 
 
-
-
-
-
-
-
-
-
 % -------- Reference --------------------------------------------
 
 \begin{category}{References} 
 \citemnobullet Available upon request
 
 \noindent\rule{\textwidth}{0.2pt}
-%\begin{minipage}[t]{0.45\columnwidth}
-%
-%    \textbf{Dr. Mark Herbster}\\
-%    Lecturer, Dept. of Computer Science\\
-%    University College London\\
-%        66 Gower Street (GS3.02)\\
-%        London WC1E 6BT,
-%        UK \\
-%    \Letter\ \href{mailto:M.Herbster@cs.ucl.ac.uk}{M.Herbster@cs.ucl.ac.uk} \\
-%    Phone : +44 (0)20 3108 7091
-%
-%    
-%\end{minipage}
-%\begin{minipage}[t]{0.45\columnwidth}
-%
-%    \textbf{Dr. Shi Zhou}\\
-%    Senior Lecturer \\ Dept. of Computer Science\\
-%    University College London\\
-%        66 Gower Street (GS3.08)\\
-%        London WC1E 6BT,
-%        UK \\
-%    \Letter\ \href{mailto: S.Zhou@cs.ucl.ac.uk }{S.Zhou@cs.ucl.ac.uk } \\
-%    Phone : +44 (0)20 3108 7088
-
-    
-%\end{minipage}
 %\centering
 %\begin{minipage}[t]{0.45\columnwidth}
 %
@@ -346,7 +290,7 @@ used for Chronic Low Back Pain Rehabilitation, Prediction of Subcellular Locatio
 
 %------Leisure Interests----------------
 \begin{category}{Leisure Interests}
-\citemnobullet Cinema, Literature, Hiking, Tango
+\citemnobullet Cinema, Literature, Tango, Hiking, Kayaking
 \citemnobullet President of CU Darwin College Film Club, Member of CU Algorithmic Trading Society %, UCLU Hiking \& Walking Society, NTUA Dance Sector 
 
 \noindent\rule{\textwidth}{0.2pt}
