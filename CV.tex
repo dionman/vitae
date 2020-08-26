@@ -1,0 +1,370 @@
+\documentclass[12pt]{resume}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+
+\hypersetup{
+    colorlinks=false,
+    pdfborder={0 0 0},
+}
+\renewcommand{\categoryfont}{\sc}
+\usepackage[margin=0.15in]{geometry}
+\renewcommand{\labelitemi}{$\bullet$}
+
+\newcommand{\cvreference}[7]{%
+    \textbf{#1}\newline% Name
+    \ifthenelse{\equal{#2}{}}{}{\addresssymbol~#2\newline}%
+    \ifthenelse{\equal{#3}{}}{}{#3\newline}%
+    \ifthenelse{\equal{#4}{}}{}{#4\newline}%
+    \ifthenelse{\equal{#5}{}}{}{#5\newline}%
+    \ifthenelse{\equal{#6}{}}{}{\emailsymbol~\texttt{#6}\newline}%
+    \ifthenelse{\equal{#7}{}}{}{\phonesymbol~#7}}
+    
+\setlength{\oddsidemargin}{0.8in}
+\setlength{\marginparwidth}{1.5in}
+
+\addtolength{\marginparwidth}{-\marginparsep}
+ \setlength{\evensidemargin}{\oddsidemargin}
+ \setlength{\textwidth}{\paperwidth}
+ \addtolength{\textwidth}{-2in}
+ \addtolength{\textwidth}{-2\oddsidemargin}
+ \addtolength{\textwidth}{\marginparwidth}
+ \addtolength{\textwidth}{\marginparsep}
+%
+%
+\setlength{\topmargin}{-1.4in}
+%
+%
+\renewcommand{\labelcitem}{$$}
+\newcommand{\first}{$1^{\mbox{\scriptsize st}}$\ }
+\newcommand{\second}{$2^{\mbox{\scriptsize nd}}$\ }
+\newcommand{\third}{$3^{\mbox{\scriptsize rd}}$\ }
+
+\author{Dionysis Manousakas}
+
+
+% ------ Address --------------------------------------------------------
+
+
+\address{
+	\begin{tabbing}
+	\textbf{Home} Darwin College, University of Cambridge,\\
+	Silver St, Cambridge CB3 9EU, UK\\\\
+	\textbf{Office} FN06, William Gates Building,\\
+	Computer Laboratory, University of Cambridge,\\
+	15 JJ Thomson Avenue, Cambridge CB3 0FD, UK \\
+	\end{tabbing}}
+	{
+	\textbf{Email} : 
+	\mbox{  \\ \tt
+	%\href{mailto:d.manousakas@gmail.com}{d.manousakas@gmail.com}}\\
+	\href{mailto:dm754@cl.cam.ac.uk}{dm754@cam.ac.uk}}\\
+  	\mbox{\small\tt \url{https://www.cl.cam.ac.uk/~dm754}} \\
+	\mbox{\small\tt \url{https://uk.linkedin.com/in/dionmanousakas}} \\
+	\textbf{Phone}:  +44 (0)7587 753767 \\
+	Citizenship: Greek
+	}
+
+
+\begin{document}
+\maketitle
+
+%%--------Personal Information
+%\begin{category}{Personal Information}
+%\citem{Birthdate}: 08/09/1989
+%\citem{Nationality}: Greek
+%\citem{Military Service}: Fulfilled
+%\end{category}
+
+
+% ------- Education ---------------------------------------------------
+
+\begin{category}{Education}
+
+\citemnobullet{} 
+\vspace{-.5cm}
+\newline 
+\textsc{University of Cambridge, Darwin College}\\
+\textbf{Doctor of Philosophy (Ph.D.), Department of Computer Science \& Technology}, \emph{Oct. 2016 - Oct. 2020 (expected)}. \\
+ Research Topic: 
+ \emph{&Data Summarizations for Scalable and Privacy-Aware Learning \\&in High Dimensions}\\ 
+ Supervisor: Prof. Cecilia Mascolo \\
+ Committee: Prof. Matthias Grossglauser~(EPFL), Dr. Amanda Prorok~(Cambridge)\\
+ 
+\newline
+\textsc{University College London}\\
+\textbf{Master of Science~(MSc) in Machine Learning}}, \emph{Nov. 2015}  (Distinction).  \\
+%Modules: Programming \& Mathematical Methods for Machine Learning, Supervised Learning, Probabilistic \& Unsupervised Learning (Gatsby Unit), Applied Machine Learning, Bioinformatics, Advanced Topics in Machine Learning (Reinforcement Learning and Kernel Methods), Information Retrieval and Data Mining,  Affective Computing and Human-Robot Interaction \\ 
+Thesis title: \emph{Longitudinal Analysis of International Trade Data based on Network Theory and Machine Learning}\\
+Supervisor: Dr Michael T. Schaub (Imperial College London) \\
+
+\newline
+\textsc{National Technical University of Athens} \\
+\textbf{Diploma in Electrical \& Computer Engineering}, (5-years degree), \emph{Sept. 2014} (GPA: 8.66/10.0 - Top 8\%)  \\ 
+Major in Control, Systems and Computer Science\\
+Final year dissertation: {\em Decentralized Reconfigurable Multi-Robot Coordination
+from Local Connectivity and Collision Avoidance Specifications}\\
+Supervisor: Prof. Kostas J. Kyriakopoulos \\
+
+\newline
+\textbf{Agios Stefanos High School}, Greece, \emph{June 2007} (GPA: 19.9/20.0, Valedictorian) 
+
+\noindent\rule{\textwidth}{0.2pt}
+\end{category}
+
+% ------- Employment ---------------------------------------------------
+\begin{category}{Internships \& Employment}
+	\citemnobullet{} 
+	\vspace{-.5cm}
+	\newline 
+	\textsc{Max Planck Institute for Software Systems},
+	\textbf{Research Intern}
+	\\Kaiserslautern \& Saarbr{\"u}cken, Germany, \emph{May 2018 - Aug. 2018}}\\
+	Research on privacy loss caused by information diffusion over networks, using multidimensional temporal point processes.\\
+Stipend awarded by MPI.\\
+Advisor: Dr. Manuel Gomez-Rodriguez  
+\newline
+
+\textsc{Nokia Bell Labs},
+\textbf{Research Intern} \\Cambridge, UK, \emph{Aug. 2017 - Oct. 2017}\\
+Research project on probabilistic modeling of population's spatiotemporal activity, as member of the Internet of Things group. Patent submitted. 
+\newline
+
+\textsc{\href{http://www.smartodds.co.uk/#}{Smartodds}},
+\textbf{Quantitative Analyst Intern}\\ London, UK, \emph{Apr. 2016 - Oct. 2016}}\\
+Statistical analysis and development of machine learning methodologies, probabilistic modeling, ensembling techniques and software for predictions and betting in football and tennis.
+\newline
+
+\textsc{\href{http://www.ment.at}{Mentat Innovations}},\\ \textbf{Data Scientist}, Athens, Greece, \emph{Sept. 2015 - Jan. 2016}\\
+Development of machine learning algorithms and software for on-the-fly analysis of streaming data, with applications in 
+cybersecurity, financial forecasting,  and
+fraud detection. 
+\noindent\rule{\textwidth}{0.2pt}
+\end{category}
+
+% --------- Research ----------------------------------------------------
+
+\begin{category}{Research interests}
+\citemnobullet Machine Learning; Scalable and Automated Bayesian inference; Variational methods; High-dimensional statistics; Differential privacy; Information geometry; Robust inference; Point Processes; Large-scale data summarization and valuation
+
+\noindent\rule{\textwidth}{0.2pt}
+\end{category}
+
+\begin{category}{Publications}
+\citemnobullet $\bullet$~\textbf{D. Manousakas}, C. Mascolo, \emph{$\beta$-Cores: Robust Large-Scale Bayesian Data Summarization in the Presence of Outliers}, \emph{arXiv}, 2020 (Under submission)
+
+\citemnobullet $\bullet$~\textbf{D. Manousakas}, Z.D. Xu, C. Mascolo, T. Campbell \emph{Bayesian Pseudocoresets}, \emph{arXiv}, 2020 (Under submission)
+
+\citemnobullet $\bullet$~S. Bhattacharya, \textbf{D. Manousakas}, A.G.C.P. Ramos, S.I. Venieris, N.D. Lane, C. Mascolo, \emph{Countering Acoustic Adversarial Attacks in Microphone-equipped Smart Home Devices}, Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies, 2020(4):1--24
+
+\citemnobullet $\bullet$~\textbf{D. Manousakas}, C. Mascolo, A.R. Beresford, D. Chan, N. Sharma \emph{Quantifying Privacy Loss of Human Mobility Graph Topology}, Proceedings on Privacy Enhancing Technologies, Volume 2018(3): 5-21 (2018)
+
+\citemnobullet $\bullet$~Students of the course Parallel Processing Systems  School of Electrical \& Computer Engineering National Technical University of Athens,
+\textit{Parallelizing the Floyd-Warshall Algorithm on
+	Modern Multicore Platforms
+	Lessons Learned}, 5th National Conference of Electrical and Computer Engineering Students, Xanthi, Greece, 2012 
+
+\noindent\rule{\textwidth}{0.2pt}
+\end{category}
+
+
+
+%--------Conferences attended-------
+\begin{category}{Professional Activities} 
+
+\citemnobullet 
+\textsc{Teaching experience}
+
+{$\bullet$  Supevisor of Computer Science Tripos, Part II Project on \emph{Anonymized Data Linkability via Approximate Graph Matching}, Encho Mishinev (Robinson College), 2019-20}\\
+{$\bullet$  Supevisor of Computer Science Tripos, Part II Project on \emph{Traffic Monitoring under Differential Privacy}, Shubham Aggarwal (Churchill College), 2018-19}\\
+{$\bullet$  Supevisor in \emph{Artificial Intelligence} (Clare, Emmanuel, Selwyn, Wolfson and Jesus College), Computer Science Tripos, Part IB, Easter terms 2018 \& 2019}\\
+{$\bullet$  Supevisor in \emph{Machine Learning and Bayesian Inference} (Peterhouse, St. John's, Christ's, Robinson, Queen's, Wolfson, Corpus Christi, Clare and King's College), Computer Science Tripos, Part II, Lent term 2018, Easter term 2019}\\
+{$\bullet$  Supevisor in \emph{Machine Learning and Real-world Data} (Gonville \& Caius, Trinity Hall and Robinson College), Computer Science Tripos, Part IA, Lent term 2017}\\
+{$\bullet$ Teaching Assistant in \emph{Social and Technological Network Data Analytics}, Advanced Computer Science MPhil, Lent term 2017}\\
+
+
+\citemnobullet 
+\textsc{Conferences Attended}
+
+$\bullet$ 2020 International Conference in Machine Learning\\
+$\bullet$ 1\ts{st} UK Mobile, Wearable and Ubiquitous Systems Research Symposium, Computer Laboratory, Cambridge, UK, September, 2018\\
+$\bullet$ 18\ts{th} Symposium on Privacy Enhancing Technologies, Barcelona, Spain, July 2018\\
+$\bullet$ Course on Complex Networks and 2nd Symposium on Spatially Embedded Networks,  Oriol College, Oxford, UK, September 2017\\
+$\bullet$ 10th ACM International Conference on Web Search and Data Mining, Cambridge, UK, February 2017\\
+$\bullet$ 3rd National Conference of Electrical and Computer Engineering Students, Thessaloniki, Greece, May 2010\\
+$\bullet$ 2nd National Conference of Electrical and Computer Engineering Students, Athens, Greece, May 2009 \\
+
+\citemnobullet
+\textsc{Reviewer}
+
+$\bullet$ Neural Information Processing Systems~(NeurIPS)\\
+$\bullet$ ACM International Joint Conference on Pervasive and Ubiquitous \mbox{Computing~(UbiComp)}\\
+$\bullet$ International ACM Web Science Conference~(WebSci)\\
+$\bullet$ ACM Transactions on Computing for Healthcare (Health)\\
+$\bullet$  Royal Society Open Science
+
+\noindent\rule{\textwidth}{0.2pt}
+\end{category}
+
+
+\newcommand{\ts}{\textsuperscript}
+
+
+
+
+%------Honors----------------
+\begin{category}{Honors \& Awards}
+
+%$\bullet$ 2016 \citem{  Fully Funded PhD Studentship}, Nokia Bell Labs \\
+
+$\bullet$ 2018 \citem{ Ford Foundation Travel Stipend}, 18\ts{th} Symposium on Privacy Enhancing Technologies, Barcelona, Spain \\
+
+$\bullet$ 2016 \citem{Dean's List for Outstanding Academic Performance 2014/15}, Faculty of Engineering, University College London \\
+
+$\bullet$ 2007 \citem{EFG-Eurobank Honorary Plaque 'The Great Moment for Education'} awarded by the President of Democracy for achieving the highest score in Greece's National
+Higher Education Entrance Examination amongst examinees in Attica (19,809/20,000).
+\\ Ranked \textbf{2nd} nationwide \textbf{over 33,174} candidates majoring in \textbf{Technology}.
+
+ \\ Ranked in \textbf{top-5} highest scores nationwide \textbf{among $\approx$ 93,000} candidates over \textbf{all specializations}.\\
+
+$\bullet$ 2007 \citem{Georgios K. Kontaxis Award} for ranking 4th in Qualifying Examination
+for the School of Electrical \& Computer Engineering, National Technical University of Athens \\
+
+$\bullet$ 2001-2007 \citem{6 Double Honorary Diplomas from the Greek Ministry of Education} for excellence in my studies during the years of secondary education \\
+
+\noindent\rule{\textwidth}{0.2pt}
+\end{category}
+
+% -------Computer Skills ------------------------------------------------------
+
+\begin{category}{Computer Skills}
+\citemnobullet
+$\bullet$ Programming -- Python~(PyTorch, TensorFlow), R, Stan, MATLAB,  Mathematica, C/C++, Java, Julia, ML, Prolog\\
+$\bullet$ IT Literacy -- \LaTeX, Linux, PGF/Ti\emph{k}Z, \texttt{git}, SQL 
+
+\noindent\rule{\textwidth}{0.2pt}
+\end{category}
+
+\iffalse
+\begin{category}{Experience in Data Problems}
+\citemnobullet - Participation in Kaggle challenges:  Leaf Classification,
+Click-Through Rate Prediction, Driver Telematics Analysis,
+Sentiment Analysis on Movie Reviews,
+Bike Sharing Demand
+
+\citemnobullet - Projects on Machine Learning problems, including: Political Opinion Detection on Twitter, Automatic Recognition System for
+Bimodal Detection of Guarding/Stiffness
+used for Chronic Low Back Pain Rehabilitation, Prediction of Subcellular Location of Eukaryotic Proteins, Monte-Carlo Control and Temporal Difference Learning in Card Games, Anomaly Detection on Streaming Data, Models Stacking and Averaging for Predictions in Sports 
+
+\citemnobullet - Coursework on state-of-the-art Machine Learning techniques, including: HMMs, Mixture Models, Latent Variable Models, Graphical Models, Gaussian Processes, Kernel Methods, Deep Neural Networks 
+
+\noindent\rule{\textwidth}{0.2pt}
+\end{category}
+\fi
+
+
+
+
+%------Linguistic----------------
+\begin{category}{Linguistic Skills}
+\citemnobullet Greek (native),
+ English (fluent - IELTS 8.0/9.0, TOEFL 104/120, ECPE), 
+ German (basic - Mittelstufe/C1), 
+ Spanish (conversant - DELE B2)
+ 
+ \noindent\rule{\textwidth}{0.2pt}
+\end{category}
+
+
+
+
+
+
+
+
+
+
+
+% -------- Reference --------------------------------------------
+
+\begin{category}{References} 
+\citemnobullet Available upon request
+
+\noindent\rule{\textwidth}{0.2pt}
+%\begin{minipage}[t]{0.45\columnwidth}
+%
+%    \textbf{Dr. Mark Herbster}\\
+%    Lecturer, Dept. of Computer Science\\
+%    University College London\\
+%        66 Gower Street (GS3.02)\\
+%        London WC1E 6BT,
+%        UK \\
+%    \Letter\ \href{mailto:M.Herbster@cs.ucl.ac.uk}{M.Herbster@cs.ucl.ac.uk} \\
+%    Phone : +44 (0)20 3108 7091
+%
+%    
+%\end{minipage}
+%\begin{minipage}[t]{0.45\columnwidth}
+%
+%    \textbf{Dr. Shi Zhou}\\
+%    Senior Lecturer \\ Dept. of Computer Science\\
+%    University College London\\
+%        66 Gower Street (GS3.08)\\
+%        London WC1E 6BT,
+%        UK \\
+%    \Letter\ \href{mailto: S.Zhou@cs.ucl.ac.uk }{S.Zhou@cs.ucl.ac.uk } \\
+%    Phone : +44 (0)20 3108 7088
+
+    
+%\end{minipage}
+%\centering
+%\begin{minipage}[t]{0.45\columnwidth}
+%
+%    \textbf{Dr. Michael T. Schaub}\\
+%    Postdoctoral Researcher, 
+%    Institute of Information and Communication Technologies, 
+%    Electronics and Applied Mathematics (ICTEAM)
+%    \\
+%    Universit\'e catholique de Louvain\\
+%       Euler Building
+%       Avenue Lema\^itre  4 \\
+%       B-1348 Louvain-la-Neuve, Belgium  \\
+%    \Letter\ \href{mailto:  michael.schaub@uclouvain.be
+%     }{michael.schaub@uclouvain.be } 
+%
+%    
+%\end{minipage}
+\end{category}
+% -------- Working Experience --------------------------------------------
+
+\begin{category}{Military service} 
+\citemnobullet
+11/2012 - 08/2013 : Fulfilled mandatory 9 month service as soldier and office assistant at the Hellenic National Guard Artillery  
+
+\noindent\rule{\textwidth}{0.2pt}
+\end{category}
+
+
+%------Leisure Interests----------------
+\begin{category}{Leisure Interests}
+\citemnobullet Cinema, Literature, Hiking, Tango
+\citemnobullet President of CU Darwin College Film Club, Member of CU Algorithmic Trading Society %, UCLU Hiking \& Walking Society, NTUA Dance Sector 
+
+\noindent\rule{\textwidth}{0.2pt}
+\end{category}
+
+
+%-----Further Education---------
+\begin{category}{Further Education}
+\citem{COURSERA}
+Game Theory (with Distinction),
+Bionformatics Algorithms - Part I (with Distinction), Computational Investing - Part I,
+Machine Learning, Control of Mobile Robots (with Distinction),
+Computational Neuroscience, Unpredictable? Randomness, Chance and Free Will
+\citem{edX} 
+Introduction to Probability - The Science of Uncertainty,
+Big Data and Social Physics
+\end{category}
+
+
+\end{document}
+
