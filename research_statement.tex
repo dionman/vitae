@@ -1,0 +1,104 @@
+\documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+%\usepackage{dmhdr}
+\moderncvstyle{casual} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{grey} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+\usepackage[scale=0.82]{geometry} % Reduce document margins
+
+\usepackage{natbib}
+\bibliographystyle{alpha}
+\usepackage[colorlinks]{hyperref}  
+\definecolor{darkred}{rgb}{0.55, 0.0, 0.0}
+\definecolor{darkscarlet}{rgb}{0.34, 0.01, 0.1}
+\hypersetup{citecolor=darkscarlet, linkcolor=blue, urlcolor=darkred}  
+
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{Dionysios T.} % Your first name
+\familyname{Manousakas, PhD} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+\title{Research Statement}
+\address{Silver Street, Darwin College}{Cambridge, CB3 9EU, UK}
+
+\email{dm754@cam.ac.uk}
+\homepage {www.cl.cam.ac.uk/\textasciitilde dm754}
+ % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\makecvtitle % Print the CV title
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Previous Research Experience}
+
+
+As part of my doctoral research, I published three original pieces of work drawing on one of the fundamental research questions in large-scale machine learning: \emph{finding scalable dataset reductions under constraints commonly arising in real-world data analysis applications}. My premise has been that principled dataset summarization methods can be harsenessed to enable efficient approximations for the purposes of large-scale data analysis without compromising the statistical requirements of privacy and robustness. Here I briefly recap these contributions.
+
+
+\subsection{i.~Privacy loss of coarsened structured data}
+\label{subsec:ch3-summary}
+Reducing the information content and removing explicit identifiers from sensitive datasets prior to public release offers an illusion of privacy.   In~\citep{manousakas2018quantifying} we examined a large collection of longitudinal mobility traces recorded by smartphone devices. We converted each pseudonymised user trace record to a truncated network, which retained the transition patterns among user's most frequent locations, and generated such representations over two different time windows spanning the entire period of tracking. Computing structural similarities via graph kernels allowed us to delevop a linkage attack, that was able to reidentify the anonymized mobility graphs at a $3.5\times$ higher median success rate compared to random guessing. Our findings stressed that pseudonymisation and coarsening of data cannot protect data subjects against adversaries with access to the infomation of (nearly uniquely) identifying substructures---hence, further elaborating on data reduction techniques that adhere to formal privacy guarantees is required.
+
+\subsection{ii.~Privacy-preserving Bayesian coresets in high dimensions}
+\label{subsec:ch4-summary}
+In~\citep{psvi} we developed a novel construction for Bayesian coresets~\citep{huggins16,campbell18,campbell19jmlr,campbell19neurips}. We extended the existing sparse variational inference framework by introducing a richer family of scalable posterior approximations which, instead of points of the original dataset, makes use of learnable pseudodata that act as variational parameters optimized to summarize the full data likelihood. Our variational approximation enabled effective summarization that is not limited by data dimensionality, unlike previous constructions, achieving significant improvements in the high-dimensional data realm. Moreover, our coreset construction is amenable both to an incremental, as well as a batch black-box optimization scheme, offering computational time savings compared to state-of-the-art sparse variational inference methods. Finally, the use of synthetic data, combined with the subsampled Gaussian mechanism, allowed us to yield differentially private dataset summarization. We demonstrated applications of inference over a diverse set of Bayesian models, including Gaussian mean estimation, linear and logistic regression, showing the advantages in data posterior approximation offered by our approach.
+
+\subsection{iii.~Robust Bayesian coresets under misspecification}
+\label{subsec:ch4-summary}
+In~\citep{beta-cores} we designed a Bayesian coreset construction suitable for summarizing datasets that potentially depart from our statistical model assumptions---as often can be the case in practice, due to insufficient modeling expertise, observations containing outliers, and/or being subjected to contamination. We proposed an incremental scheme that attains a sparse approximation of a robust generalized Bayesian posterior defined via the power density divergence, while discerning and retaining a representative small part of the data inliers instead of the full dataset. Further to offering scalability and reducing data redundancy, our scheme provided a unified and highly-automated solution to the important question of detecting and removing harmful datapoints prior to inference. We evaluated our technique on clean and contaminated data over a range of applications, including Gaussian mean inference, Bayesian linear regression, neural linear regression, as well as for selection of informative data subpopulation combinations, demonstrating reliable posteriors and predictive performance in all examined test cases.
+
+
+
+\section{Future research directions}
+\label{sec:future-research-directions}
+The summarization frameworks presented in my dissertation allow numerous probabilistic models to be tractably and reliably deployed in practice. Yet they allude to a realm of so far unexplored research questions, forming a number of potential directions for future research.
+
+\subsection{i.~Coresets for models with structured likelihoods and simpler inference results}
+\label{subsec:structure-liks}
+
+Our variational formulations for coreset construction use the assumption that the data likelihood function gets factorised as a product of individual datapoint potentials. To the best of our knowledge, the idea of constructing coresets has not yet been used for inference in models with structured likelihood functions, including time-series and point processes. The investigation of this potential is backed by recent results on parameter estimation for Hawkes processes using uniform downsampling~\citep{li19}, which indicated important improvements in efficiency when learning in massive temporal event sequences, even without explicitly optimizing for redundancy in the extracted data subsets. Moreover, many machine learning applications aim to deliver simpler inference results compared to computing the full posterior probability, e.g. in infomation retrieval just returning the mode of the posterior distribution or a small number of highly-likely results is often sought. I think it is particularly interesting to investigate whether fast coreset-like compression techniques can be adapted as scalable solutions for targets of this type.
+
+\subsection{ii.~Implicit differential privacy amplification of data-dependent compressions}
+\label{subsec:implicit-dp-amplification}
+
+In~\citep{psvi} we presented an optimization scheme that yields Bayesian coreset constructions under explicit differential privacy~(DP) quarantees. A known result in the DP literature is that incorporating random sampling in data analysis has implicit privacy amplification effects, i.e.~that an algorithm has higher privacy guarantees when run on a random subset of the datapoints instead of the full dataset~\citep{li12, beimel13, bassily14, abadi16}. More recently,~\citep{balle18} presented a unifying methodology that utilises couplings and divergences to reason about DP amplification effects of several random sampling methods~(including Poisson subsampling and sampling with/without replacement), under different data neighbouring relations.
+
+Existing research makes a common assumption that simplifies privacy analysis, but is violated in the case of coresets: the sampling distribution is data-independent. It remains an open question whether generalizations of existing approaches can be used to argue about implicit DP amplification when replacing a privacy-sensitive dataset with a coreset---in primitive schemes, coreset construction simply takes the form of importance sampling~\citep{bachem17}. Investigating DP amplification under data-dependent sampling is a direction with far-reaching implications, that can contribute to tighter privacy analysis, not only in the case of coresets, but more broadly in all machine learning applications involving importance sampling, which is already a cornerstone of many state-of-the-art stochastic learning methods. 
+
+
+\subsection{iii.~Human-centric summaries for scalable inference}
+\label{subsec:human-centric-pseudodata}
+
+In~\citep{psvi}~we presented a method utilising learnable batches of pseudodata to summarize a much larger dataset. Naturally this coreset construction bears the potential of reducing the interpretability of learned pseudodata, since coreset points are now not a subset of the original dataset, but rather the result of a likelihood-specific optimization routine. To remedy related concerns, further interpretability constraints can be explicitly incorporated in the optimization formulation of pseudocoreset variational inference of.
+
+Beyond the quest of interpretability, additional research is required in examining other desiderata in human-centric inference. To name a few, deletion-robustness is often sought or imposed on methods for large-scale data analysis~\citep{mirzasoleiman17, ginart19}: user's \emph{right-to-be-forgotten} is related to imposing bounds on the effects of removing an individual datapoint from an existing dataset, and can be approximately satisfied under differential privacy. Moreover, group \emph{fairness} is one more topic that necessitates further investigation: without special treatment, reducing datasets will potentially transfer existing inequalities across groups in the derived summary, hence a different construction may be sought when aiming to ameliorate unfairness in scalable inference.  
+
+\subsection{iv.~Compressing datasets for meta-learning}
+\label{subsec:metacoresets}
+
+A distinguishing feature of human intelligence is the ability to adaptively learn new tasks on the basis of prior acquired experience, rather than learning each new task from scratch. Although Bayesian coresets have been originally proposed as an approach for efficient model-specific inference, it seems reasonable to inquire whether sparse dataset summaries can be also useful in meta-learning, i.e.~settings where we aim to learn over a variety of tasks using few training examples per task. Recent work has shown that model-agnostic meta-learning~\citep{finn17} admits reformulations as a hierarchical Bayesian model, and gets performance improvements via expressing uncertainty~\citep{grant18,finn18}. Apart from offering another avenue for scalability in meta-learning, extracting versatile summaries from a universe of data domains simulates more closely the situations that a human faces when organizing experience and knowledge for learning in the real world; hence, designing coresets in this context could contribute novel insights into the nature of general intelligence.
+
+\section{Broader interests}
+Over the years of my PhD research, I have had a prolonged exposure to the state-of-the-art in the areas of approximate Bayesian inference, probabilistic modeling, point processes, robust statistics and data privacy. My studies also emcompassed the domains of information geometry, compressive sensing, convex, non-convex and submodular optimization, and machine learning for dynamical systems. In forthcoming years I would be intrested to diversify my research agenda via looking into problems arising under data scarsity. Even though my recent works were motivated by data redudancy, similar ideas of acquiring maximally informative points while generating a parsimonious data (sub)set are important in the areas of active learning, Bayesian optimization and adaptive experimentation. 
+
+\bibliography{references}
+
+\iffalse
+The overarching theme of my doctoral research has been investigating the question: \emph{how can we leverage parsimonious representations---summarizations---of massive datasets as a means to enable scalable inference with reliable uncertainty quantification, and enhance inference results with statistical privacy and robustness?} Towards that end my work made a two-fold expansion of the toolbox of Bayesian coresets~\citep{huggins16,campbell18,campbell19jmlr,campbell19neurips}:
+\begin{itemize}
+	\item I defined a generalization of coreset definition which utilises learnable weighted pseudodata, thus achieving two important contributions. First, this allowed improving the quality of coreset-based posterior approximations in the high-dimensional data realm, compared to state-of-the-art coreset constructions. Second, via standard randomization tools, my coreset construction made possible to provide synthetic summarizations of sensitive datasets that are amenable to arbitrary post-processing under the formal statistical guarantees of approximate differential privacy~\citep{psvi}.
+	\item Via sparse approximations to a generalization of Bayesian posterior defined through robust statistical divergences, I introduced an automated method that summarizes potentially contaminated datasets for reliable probabilistic inference. This mehod introduced a highly automated unified approach to resolving jointly the tasks of data cleansing and scalable inference on real-world massive scale observations, providing resilient learning results in the presence of insufficient modeling expertise, noise, outliers, or adversarial corruption in the data~\citep{beta-cores}.
+\end{itemize}
+My work on coresets has been motivated by earlier findings on the anonymity and privacy properties of highly reduced representations of sensitive large-scale population mobility dataset~\citep{manousakas2018quantifying}. Over the years of my PhD research, I have had a prolonged exposure to the state-of-the-art in the areas of approximate Bayesian inference, probabilistic modeling, robust statistics and data privacy. My studies also emcompassed the areas of active learning, adaptive experimentation and machine learning for dynamical systems. 
+\fi
+
+
+\end{document}
